@@ -1,7 +1,7 @@
 # NARL–CDMG Atmospheric Observation Data Monitoring and Anomaly Detection System
 
 > **Internship Project**  
-> **Associated Organization:** National Atmospheric Research Laboratory (NARL), Department of Space, Government of India, Gadanki, near Tirupati, Andhra Pradesh.  
+> **Associated Organization:** National Atmospheric Research Laboratory (NARL), Department of Space, Government of India. 
 > **Host Group:** Computer & Data Management Group (CDMG)  
 > **Mode:** Educational Prototype (Sample Data Mode)
 
