@@ -1,0 +1,54 @@
+================================================================================
+ NATIONAL ATMOSPHERIC RESEARCH LABORATORY (NARL)
+ COMPUTER & DATA MANAGEMENT GROUP (CDMG)
+ ATMOSPHERIC OBSERVATION DATA MONITORING AND ANOMALY DETECTION SYSTEM
+ SCIENTIFIC DATASET PROCESSING & AUDIT LOG
+================================================================================
+Execution Timestamp      : 2026-10-26 10:00:07
+Active Operating Mode    : Sample Data Mode (Educational Prototype)
+Input Dataset Filename   : sample_atmospheric_data.csv
+Input Dataset SHA-256    : 595ec8bb63c39516132c2911f21e94cfc15a7be38a1c3ef3a0f821b9774c02dc
+--------------------------------------------------------------------------------
+1. WORKFLOW PIPELINE EXECUTION:
+   [Step 1] Input Ingestion      -> Read raw observations from CSV/Excel source
+   [Step 2] Schema Verification  -> Normalization & column mapping (timestamp, temp, hum, wind)
+   [Step 3] Data Validation      -> Checked numeric finiteness, empty dropouts, and timestamp parsing
+   [Step 4] Boundary Validation  -> Physical plausibility (non-negative wind speed, 0-100% humidity)
+   [Step 5] Anomaly Detection    -> Applied deterministic threshold limits
+   [Step 6] Evidence Compilation -> Generated Excel workbook, processed CSV, and audit logs
+--------------------------------------------------------------------------------
+2. PROCESSING AUDIT STATISTICS:
+   Total Records Read    : 144
+   Valid Records         : 142
+   Invalid / Missing     : 2
+   Anomalies Flagged     : 7
+   Overall Dataset Status: INVALID DATA
+   Latest Valid Reading  : 2025-06-01 23:50 (T: 25.3 °C, RH: 77.1 %, Wind: 5.7 m/s)
+--------------------------------------------------------------------------------
+3. ACTIVE CONFIGURATION THRESHOLDS:
+   Temperature Limits    : [-20.0 °C, 45.0 °C]
+   Humidity Limits       : [0.0 %, 90.0 %]
+   Wind Speed Limits     : [0.0 m/s, 30.0 m/s]
+--------------------------------------------------------------------------------
+4. GENERATED PROJECT EVIDENCE ARTIFACTS & FILE INTEGRITY HASHES:
+   * processed_atmospheric_data.csv
+     Path     : backend/data/exports/processed_atmospheric_data.csv
+     Size     : 8197 bytes (8.00 KB)
+     SHA-256  : 458e01082208e2d56785bb82448aaf54b8710674034a51b801ac9a3e365aacb3
+
+   * atmospheric_anomalies_report.csv
+     Path     : backend/data/exports/atmospheric_anomalies_report.csv
+     Size     : 1511 bytes (1.48 KB)
+     SHA-256  : b2fe9eca37f90b110847e1c8e5de9ab96aa07446789d6f90177695fbcfe666b7
+
+   * atmospheric_monitoring_evidence.xlsx
+     Path     : backend/data/exports/atmospheric_monitoring_evidence.xlsx
+     Size     : 21161 bytes (20.67 KB)
+     SHA-256  : 271d1c55baefc7795c869444f13251a3571c6b60cf02584d5f4a0d7953659dab
+
+--------------------------------------------------------------------------------
+INTEGRITY VERIFICATION NOTE:
+The SHA-256 cryptographic hashes recorded above verify that file contents have
+not been altered since generation. Hash recalculation confirms verifiable evidence
+integrity across all exported datasets and analytical reports.
+================================================================================

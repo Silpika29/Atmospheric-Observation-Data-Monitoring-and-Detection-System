@@ -1,0 +1,10 @@
+timestamp,variable,observed_value,threshold_rule,reason,severity,status
+2025-06-01 03:20,Wind Speed,-4.5 m/s,Non-negative (>= 0.0 m/s),Negative wind speed: (-4.5 m/s < 0.0 m/s physical minimum),High,Flagged for review
+2025-06-01 07:10,Humidity,104.5 %,"Physical range [0%, 100%]",Invalid humidity range: (104.5% is outside physical 0-100% boundary),High,Flagged for review
+2025-06-01 10:30,Temperature,45.0 °C,"[-20.0°C, 45.0°C]",Outside configured range: Temperature (45.0°C) reaches/exceeds upper limit (45.0°C),Review Required,Flagged for review
+2025-06-01 10:40,Humidity,96.0 %,"Configured [0.0%, 90.0%]",Outside configured range: Humidity (96.0%) exceeds configured threshold (90.0%),Review Required,Flagged for review
+2025-06-01 10:50,Wind Speed,35.0 m/s,Max 30.0 m/s,Outside configured range: Wind speed (35.0 m/s > 30.0 m/s),Review Required,Flagged for review
+2025-06-01 13:40,Temperature,52.8 °C,"[-20.0°C, 45.0°C]",Outside configured range: Temperature (52.8°C) reaches/exceeds upper limit (45.0°C),Review Required,Flagged for review
+2025-06-01 16:30,Temperature,nan,-20.0°C to 45.0°C,Missing or invalid value: Temperature is empty,High,Flagged for review
+2025-06-01 19:10,Humidity,ERR_VAL,0.0% to 90.0%,Missing or invalid value: Humidity contains non-numeric value 'ERR_VAL',High,Flagged for review
+2025-06-01 21:50,Temperature,-24.5 °C,"[-20.0°C, 45.0°C]",Outside configured range: Temperature (-24.5°C) falls below lower limit (-20.0°C),High,Flagged for review
